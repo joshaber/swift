@@ -1,0 +1,21 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	// An empty postCreate Prevents 'oryx' from running (as is the default with the universal image)
+	"postCreateCommand": "",
+	"hostRequirements": {
+		"storage": "128gb",
+		"memory": "16gb"
+	},
+	"init": true,
+	"privileged": true,
+	"runArgs": [
+		"-v", "/lib/modules:/lib/modules",
+		"-v", "/dev:/dev"
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/powershell:1": {},
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/rust:1": {},
+		"./features/remove-outdated-apt-list": {}
+	}
+}
