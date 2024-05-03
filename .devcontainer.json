@@ -1,10 +1,6 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"postCreateCommand": "",
-	"hostRequirements": {
-		"storage": "128gb",
-		"memory": "16gb"
-	},
 	"init": true,
 	"privileged": true,
 	"runArgs": [
